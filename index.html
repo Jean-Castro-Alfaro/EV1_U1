@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de cotejo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: lightgray;
+        }
+        input, button {
+            font-size: 15px;
+            margin-bottom: 10px;
+            padding: 5px;
+            width: 300px;
+        }
+        #resultado {
+            margin-top: 40px;
+            font-size: 18px;
+            font-weight: bold;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="nombre" placeholder="Ej: Jean Castro">
+    <input type="text" id="email" placeholder="Ej: jean.castro@estudiante.cl">
+
+    <select id="carrera" aria-label="--Selecciona una opción--">
+        <option value="">--Selecciona una opción--</option>
+        <option value="Ingeniería en Informática">Ingeniería en Informática</option>
+        <option value="Ingeniería Civil en Computación e Informática">Ingeniería Civil en Computación e Informática</option>
+        <option value="Ingeniería Civil Industrial">Ingeniería Civil Industrial</option>
+        <option value="Ingeniería Civil Mecánica">Ingeniería Civil Mecánica</option>
+        <option value="Ingeniería Civil Eléctrica">Ingeniería Civil Eléctrica</option>
+        <option value="Ingeniería Civil Química">Ingeniería Civil Química</option>
+      
+    </select>
+
+    <button id="funcionjava()" onclick="funcionjava()">Enviar</button>
+
+   <div id="resultado"></div>
+
+    <script>
+       function funcionjava() {
+         let nombre = document.getElementById("nombre").value;
+         let email = document.getElementById("email").value;
+         let carrera = document.getElementById("carrera").value;
+
+        let resultado = "Nombre: " + nombre + "\nEmail: " + email + "\nCarrera: " + carrera;
+
+        document.getElementById("resultado").innerText = resultado;
+
+    }
+
+   </script>
+
+</body>
+</html>
